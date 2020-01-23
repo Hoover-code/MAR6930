@@ -10,7 +10,7 @@ flCensus4 <- subset(flCensus, HINCP<=500000)
 # Histogram data visualizations in a facet wrap
 p <- ggplot(flCensus4, aes(HINCP/10000)) + geom_histogram(binwidth=2,color="black",fill="white") + facet_wrap(~VEH)
 p
-# Boxplot data visualizations in a 
+# Boxplot data visualizations with truncated data and variable width boxplots
 p <- ggplot(flCensus4, aes(x=VEH, y=HINCP/10000, group=VEH)) + 
   geom_boxplot(varwidth = TRUE)
 p
