@@ -9,7 +9,7 @@
 # This packages need to be "Installed" in R first
 
 library(rvest)
-webpage <- read_html("https://www.cia.gov/library/publications/the-world-factbook/fields/335rank.html")
+webpage <- read_html("https://www.cia.gov/the-world-factbook/field/population/country-comparison")
 tbls <- html_nodes(webpage,"table")
 head(tbls)
 tbls_ls <- webpage %>%
